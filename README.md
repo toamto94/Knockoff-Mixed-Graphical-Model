@@ -7,6 +7,8 @@ The algorithm uses the model-X framework promoted by Candès et al. [https://arx
 ## Installation
 pip install git+https://github.com/toamto94/Knockoff-Mixed-Graphical-Model.git
 
+Note that this doess not install the visualization packages used below.
+
 
 ## Example
 
