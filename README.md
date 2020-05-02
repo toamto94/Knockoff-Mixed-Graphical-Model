@@ -2,8 +2,6 @@
 This is an algorithm for training a graphical model for associations between variables, some of which are qualitative and some quantitative.
 The algorithm uses the model-X framework promoted by Candès et al. [https://arxiv.org/abs/1610.02351] which controls the proportion of falsely discovered edges,
 
-\mathbb{E} \{ \frac{ | j \in \hat{S} \cap H_0 |}{ | \hat{S} | }\} \leq q
-
 <img src="https://render.githubusercontent.com/render/math?math=\mathbb{E} \{ \frac{ | j \in \hat{S} \cap H_0 |}{ | \hat{S} | }\} \leq q">
 
 ## Installation
@@ -90,7 +88,7 @@ plt.show()
 KMGM = kmgm.Knockoff_Mixed_Graphical_Model()
 ```
 
-#### Training with Lasso-coefficient-distance (lcd), $W_i = |\hat{b}_i(\lambda)| - |\hat{b}_{i + n}(\lambda)|$ as feature statistics function
+#### Training with Lasso-coefficient-distance (lcd), <img src="https://render.githubusercontent.com/render/math?math=W_i = |\hat{b}_i(\lambda)| - |\hat{b}_{i + n}(\lambda)|"> as feature statistics function
 
 
 ```python
