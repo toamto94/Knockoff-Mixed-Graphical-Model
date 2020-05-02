@@ -7,5 +7,5 @@ setup(name='KnockoffMixedGraphicalModel',
       author_email='tom_mueller94@gmx.de',
       url='https://github.com/toamto94/Knockoff-Mixed-Graphical-Model',
       packages=['KnockoffMixedGraphicalModel'],
-      install_requires=['pandas==1.0.1', 'numpy==1.18.1']
+      install_requires=['pandas==1.0.1', 'numpy==1.18.1', 'scikit-learn==0.22.1']
      )
