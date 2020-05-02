@@ -27,6 +27,7 @@ from KnockoffMixedGraphicalModel import kmgm, isingutils
 
 ```python
 os.environ["PATH"] += os.pathsep + "C:/Program Files (x86)/Graphviz2.38/bin/"
+# Add this line and adapt it to your graphviz folder if it is not automatically added to your PATH environment variable
 ```
 
 #### Load data
