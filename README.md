@@ -19,8 +19,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from graphviz import Graph
-import Isingutils
-from Knockoff_Mixed_Graphical_Model import Knockoff_Mixed_Graphical_Model, Ising_Normal_Knockoffs
+from KnockoffMixedGraphicalModel import kmgm, isingutils
 ```
 
 
@@ -43,14 +42,14 @@ Y = np.array(pd.read_csv("data\\Y.csv")) #continous subvector
 
 ```python
 coupling = np.cov(Z.T)
-joint_coupling = Isingutils.Ising_Data.joint_coupling(Z, Y)
+joint_coupling = isingutils.Ising_Data.joint_coupling(Z, Y)
 ```
 
 #### Create instance of sampler
 
 
 ```python
-conditional_gaussian_knockoff_sampler = Ising_Normal_Knockoffs(Z, Y, coupling, joint_coupling)
+conditional_gaussian_knockoff_sampler = kmgm.Ising_Normal_Knockoffs(Z, Y, coupling, joint_coupling)
 ```
 
 #### Sample Knockoffs
@@ -86,7 +85,7 @@ plt.show()
 
 
 ```python
-KMGM = Knockoff_Mixed_Graphical_Model()
+KMGM = kmgm.Knockoff_Mixed_Graphical_Model()
 ```
 
 #### Training with Lasso-coefficient-distance (lcd), $W_i = |\hat{b}_i(\lambda)| - |\hat{b}_{i + n}(\lambda)|$ as feature statistics function
